@@ -98,6 +98,37 @@ for(i = 0; i < count; i+=1)
 
 </details>
 
+<details>
+    <summary>005 - Caching</summary>
+
+# Load (Read)
+- Load => Input[0]
+- What determines the performance of load? Cache!
+
+# Cache
+## Register File in CPU
+- desinged to produce value exteremly quickly & feed them to instruction
+- Holds few hundreds of values at most
+
+## Load Behavior
+- CPU goes to {#} to find input[0]
+1. L1 (~3 cycles, 32KB)
+2. L2 (~14 cycles, 256KB)
+3. L3 (~80 cycles, ~8MB)
+4. Main Memory (~Slowest cycles, ~16GB)
+
+## Boundary b/w L2 & L3 (Usually)
+- L1, L2 is per core => Each core has 32KB, 256KB for L1, L2
+- L3 is shared memory
+
+# Benchmark L1, L2, L3 & Main Memory
+- QuadAVXPtr 4096: 13.21 (L1 cache)
+- QuadAVXPtr 32768: 7.70 (L2 cache)
+- QuadAVXPtr 262144: 4.4 (L3 cache)
+- QuadAVXPtr 33554432: 1.44 (Main Memory)
+
+</details>
+
 # Resources
 - [Paid Tutorial](https://www.computerenhance.com/)
 
