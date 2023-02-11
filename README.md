@@ -2,6 +2,8 @@
     <summary>001 - Intro</summary>
     - Understand CPU performance
     - Aware of CPU instructions
+    - Comparison between Python & C
+    - SIMD & AVX for reducing the # of instructions
 </details>
 
 
@@ -69,6 +71,32 @@ for(i = 0; i < count; i+=1)
 </details>
 
 
+<details>
+    <summary>004 - Single Instruction, Multiple Data</summary>
+
+# SIMD
+- - Make multiple ADD instructions in 1 instruction
+- - PADDD => Load 4 things & add them to accumulator (Think of vector)
+- - Slot Size for 32bit value: SSE (4), AVX(8), AVX512(16)
+- - Storage size (register) is based on bit width
+- - Need to use intrinsic function
+
+# Benchmark in C (SSE & AVX)
+- SingleScalar: 0.85 adds/clock peak
+- SingleSSE: 3.12 adds/clock peak
+- SingleAVX: 7.04 adds/clock peak
+  
+# Benchmark 2 in C (Unrolled version of AVX)
+- QuadScalarPtr: 1.94
+- SingleAVX: 7.08
+- DualAVX: 11.01
+- QuadAVX: 13.38
+
+# Comparison
+- C: 0.8 adds/cycle
+- QuadAVX: 13.38 adds/cycle (16X performance of C)
+
+</details>
 
 # Resources
 - [Paid Tutorial](https://www.computerenhance.com/)
