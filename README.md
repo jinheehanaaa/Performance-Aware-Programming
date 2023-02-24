@@ -1,9 +1,15 @@
+
+<details> <!-- Pre-Course-->
+    <summary>Intro</summary>
+
+
 <details>
     <summary>001 - Intro</summary>
-    - Understand CPU performance
-    - Aware of CPU instructions
-    - Comparison between Python & C
-    - SIMD & AVX for reducing the # of instructions
+
+- Understand CPU performance
+- Aware of CPU instructions
+- Comparison between Python & C
+- SIMD & AVX for reducing the # of instructions
 </details>
 
 
@@ -22,7 +28,7 @@
 ## Python
 - More than 100 instructions
 
-2. Cycle Benchbark on addition function
+1. Cycle Benchbark on addition function
 ## Python
 - adds/cycle: 0.0061
 ## C Language
@@ -128,6 +134,26 @@ for(i = 0; i < count; i+=1)
 - QuadAVXPtr 33554432: 1.44 (Main Memory)
 
 </details>
+
+</details>  <!-- Pre-Course END-->
+
+
+<details>
+    <summary>Main Course</summary>
+    
+<details>
+    <summary>The Haversine Distance Problem</summary>
+    
+
+
+</details>    
+
+
+</details>
+
+
+
+
 
 # Resources
 - [Paid Tutorial](https://www.computerenhance.com/)
